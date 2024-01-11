@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wabacus-config xmlns="http://www.wabacus.com"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="http://www.wabacus.com xsd/wabacus.cfg.xsd">
+	<system>
+		<item name="webroot" value="/"/><!-- 应用的根URL -->
+		<item name="webroot-abspath" value=""/><!-- 默认为context.getRealPath("/")获取的值，可以直接配置根路径 -->
+		<item name="showreport-url" value="/report.wx"/><!--显示报表数据的URL，就是在web.xml中配置的<url-pattern/>的值可以带参数-->
+		<item name="encode" value="UTF-8"/>
+		<item name="3des-keyfilepath" value="classpath{/3des.key}"/><!-- 3des密钥存放位置 -->
+		<item name="show-sql" value="true"/><!-- 是否显示执行的SQL语句或存储过程 -->
+		<item name="default-cellresize" value="2"/><!-- 指定整个项目中所有单行表头的数据自动列表报表的表格单元格默认可移动性 -->
+		<item name="default-labelstyle" value="1"/><!-- 查询条件提示标签的显示位置 -->
+		<item name="skin" value="vista"/><!-- 皮肤样式 lightblue-->
+		<item name="dataimport-batchupdate-size" value="30"/>
+		<item name="default-checkpermission" value="true"/><!-- 本应用是否要检查权限，如果在不需要检查权限的应用中关闭它，可以改善性能 -->
+		<item name="prompt-dialog-type" value="artdialog"/><!-- 提示组件类型 ymprompt;artdialog-->
+		<item name="default-chart-datatype" value="xmlurl-servlet"/><!-- 默认的chart图表数据类型 -->
+	</system>
+	<datasources default="ds_mysql">
+		<datasource name="ds_mysql" type="com.wabacus.config.database.datasource.C3P0DataSource" dbtype="com.wabacus.config.database.type.MySql">
+			<property name="driver">com.mysql.jdbc.Driver</property>
+			<property name="url"><![CDATA[jdbc:mysql://localhost:3306/wabacusdemodb?useUnicode=true&characterEncoding=GBK]]></property>
+			<property name="user">root</property>
+			<property name="password">root</property>
+
+			<property name="max_size">20</property>
+			<property name="min_size">5</property>
+			<property name="timeout">100</property>
+			<property name="max_statements">100</property>
+			<property name="idle_test_period">50</property>
+			<property name="acquire_increment">2</property>
+		</datasource>
+	</datasources>
+
+	<!-- 配置所有报表类型 -->
+	<report-types/>
+
+	<inputbox-types/>
+
+	<!-- 配置本项目中所有报表页面都必须包含的js文件 -->
+	<global-jsfiles/>
+
+	<!-- 配置本项目中所有报表页面都必须包含的css文件 -->
+	<global-cssfiles/>
+
+	<global-interceptors>
+
+	</global-interceptors>
+
+	<i18n-resources file="/resources/i18n/ApplicationResources.xml"/>
+
+	<!-- 注册所有全局资源文件 -->
+	<global-resources>
+
+	</global-resources>
+
+	<!-- 注册所有报表配置文件 -->
+	<report-files>
+		<report-file pattern="true">report/(report_)(\S*?)(\.xml)</report-file>
+		<!--report-file pattern="true">classpath{reportconfig/report/(report_)(\S*?)(\.xml)}</report-file>
+		<report-file pattern="true">relative{reportconfig/report/(report_)(\S*?)(\.xml)}</report-file>
+		<report-file pattern="true">absolute{D:\reportconfig\report\(report_)(\S*?)(\.xml)}</report-file-->
+		<!--report-file>report/report_fusioncharts.xml</report-file>
+  		<report-file>report/report_reportypes.xml</report-file>
+  		<report-file>report/report_permissions.xml</report-file>
+  		<report-file>report/report_template.xml</report-file>
+  		<report-file>report/report_container.xml</report-file>
+  		<report-file>report/report_modularize.xml</report-file>
+  		<report-file>report/report_usualfunc1.xml</report-file>
+  		<report-file>report/report_usualfunc2.xml</report-file>
+  		<report-file>report/report_usualfunc3.xml</report-file>
+  		<report-file>report/report_usualfunc4.xml</report-file>
+  		<report-file>report/report_usualfunc5.xml</report-file>
+  		<report-file>report/report_dataexportprint.xml</report-file>
+  		<report-file>report/report_l10n_en.xml</report-file>
+  		<report-file>report/report_i18n.xml</report-file>
+  		<report-file>report/report_editablefunc1.xml</report-file>
+  		<report-file>report/report_editablefunc2.xml</report-file>
+  		<report-file>report/report_editablefunc3.xml</report-file>
+  		<report-file>report/report_editablefunc4.xml</report-file>
+  		<report-file>report/report_editablefunc5.xml</report-file>
+  		<report-file>report/report_formfunc1.xml</report-file>
+  		<report-file>report/report_formfunc2.xml</report-file>
+  		<report-file>report/report_clientapi.xml</report-file-->
+	</report-files>
+</wabacus-config>
