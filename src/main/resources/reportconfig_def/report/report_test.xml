@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <applications xmlns="http://www.wabacus.com"
 			   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			   xsi:schemaLocation="http://www.wabacus.com ../xsd/wabacus.applications.xsd">
+			   xsi:schemaLocation="http://www.wabacus.com ../../reportconfig/xsd/wabacus.applications.xsd">
 	<page id="listpage1">
 		<report id="report1" title="员工基本信息列表teswwt" pagesize="20" scrollstyle="image"  dataexport="richexcel">
 			<display>

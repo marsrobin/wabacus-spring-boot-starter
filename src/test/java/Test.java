@@ -21,7 +21,7 @@ public class Test {
         //factory.setExpandEntityReferences(false); // 不展开实体引用
         DocumentBuilder builder  = factory.newDocumentBuilder();
         // 解析XML文件并获取Document对象
-        File xmlFile =  new ClassPathResource("/reportconfig/wabacus.cfg.xml").getFile();
+        File xmlFile =  new ClassPathResource("/reportconfig_def/wabacus.cfg.xml").getFile();
         Document document = builder.parse(xmlFile);
         Element root = document.getDocumentElement();
         System.out.println(root.getNodeName());

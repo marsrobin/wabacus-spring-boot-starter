@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wabacus-config xmlns="http://www.wabacus.com"
 				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-				xsi:schemaLocation="http://www.wabacus.com xsd/wabacus.cfg.xsd">
+				xsi:schemaLocation="http://www.wabacus.com ../reportconfig/xsd/wabacus.cfg.xsd">
 	<system>
 		<item name="webroot" value="/"/><!-- 应用的根URL -->
 		<item name="webroot-abspath" value=""/><!-- 默认为context.getRealPath("/")获取的值，可以直接配置根路径 -->

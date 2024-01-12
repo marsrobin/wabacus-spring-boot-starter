@@ -9,6 +9,8 @@ Wabacus是一个完整的JAVAEE开发框架，目前主要使用该框架做报�
 Wabacus的资料请在百度网盘自行下载：链接：https://pan.baidu.com/s/18sqovzNGrs9BQswt9cGKpw?pwd=4kiy 
 提取码：4kiy
 
+有哪位前端大神，能否帮重写一套前端样式，以适应不同的系统界面。
+
 # 安装使用
 
 1.在springboot项目中导入maven依赖
@@ -127,3 +129,4 @@ wabacus:
 此处的report.wx在 wabacus.cfg.xml  中  showreport-url  该项，此为报表的入口地址。
 
 在datasources中配置你的数据源。
+
