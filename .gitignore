@@ -1,3 +1,5 @@
 # Default ignored files
 /target/
 /.idea/
+/target/
+/wabacus-spring-boot-starter.iml
