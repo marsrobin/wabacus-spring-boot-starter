@@ -3,12 +3,12 @@
 			   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			   xsi:schemaLocation="http://www.wabacus.com ../xsd/wabacus.applications.xsd">
 	<page id="listpage1">
-		<report id="report1" title="员工基本信息列表" pagesize="20" scrollstyle="image"  dataexport="richexcel">
+		<report id="report1" title="员工基本信息列表teswwt" pagesize="20" scrollstyle="image"  dataexport="richexcel">
 			<display>
 				<col column="{sequence:1}" label="序号"/>
 				<col column="no" label="工号" clickorderby="true" valuestyleproperty="style='mso-number-format:\@'"/>
 				<col column="name" label="姓名" clickorderby="true"/>
-				<group label="基本信息">
+				<group label="基本信息2s">
 					<col column="sex" label="性别"/>
 					<col column="age" label="年龄" clickorderby="true" filter="true" filterwidth="120px"/>
 					<col column="birthday" label="出生日期" clickorderby="true"/>

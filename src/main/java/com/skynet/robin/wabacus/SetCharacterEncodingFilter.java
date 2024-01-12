@@ -5,18 +5,14 @@ import com.wabacus.config.Config;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 
-public class SetCharacterEncodingFilter implements Filter
-{
+public class SetCharacterEncodingFilter implements Filter {
     private FilterConfig filterConfig = null;
 
-    public void init(FilterConfig filterConfig) throws ServletException
-    {
-
+    public void init(FilterConfig filterConfig) throws ServletException {
         this.filterConfig = filterConfig;
     }
-    public void doFilter(ServletRequest request, ServletResponse response,
-                         FilterChain chain)
-    {
+    
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
         try
         {
             if(!Config.encode.equalsIgnoreCase("utf-8"))
@@ -44,8 +40,7 @@ public class SetCharacterEncodingFilter implements Filter
             e.printStackTrace();
         }
     }
-    public void destroy()
-    {
+    public void destroy() {
         this.filterConfig = null;
     }
 }
