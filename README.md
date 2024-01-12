@@ -9,7 +9,7 @@ Wabacus是一个完整的JAVAEE开发框架，目前主要使用该框架做报�
 Wabacus的资料请在百度网盘自行下载：链接：https://pan.baidu.com/s/18sqovzNGrs9BQswt9cGKpw?pwd=4kiy 
 提取码：4kiy
 
-有哪位前端大神，能否帮重写一套前端样式，以适应不同的系统界面。
+有哪位前端大神，能否帮重写一套前端样式，以适应当前Web开发的审美。
 
 # 安装使用
 
@@ -129,4 +129,8 @@ wabacus:
 此处的report.wx在 wabacus.cfg.xml  中  showreport-url  该项，此为报表的入口地址。
 
 在datasources中配置你的数据源。
+
+# 静态资源
+
+如果你的开发的是SPA单页应用，可以将静态资源前置到nginx中进行访问。该插件所设计静态资源位于：classpath:reportconfig/webreources
 

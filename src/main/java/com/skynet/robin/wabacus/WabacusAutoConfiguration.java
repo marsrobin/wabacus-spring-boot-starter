@@ -23,8 +23,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
 @Configuration
-@EnableAutoConfiguration
-public class WabacusConfig implements WebMvcConfigurer {
+public class WabacusAutoConfiguration implements WebMvcConfigurer {
 
     private static final String DEF_CONFIG_FILE_NAME = "wabacus.cfg.xml";
     private static final String DEF_CONFIG_PATH = "classpath:reportconfig";
